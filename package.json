@@ -1,0 +1,25 @@
+{
+  "name": "autotests_js_advanced",
+  "type": "module",
+  "devDependencies": {
+    "@wdio/allure-reporter": "^8.36.1",
+    "@wdio/cli": "^8.36.1",
+    "@wdio/local-runner": "^8.36.1",
+    "@wdio/mocha-framework": "^8.36.1",
+    "@wdio/spec-reporter": "^8.36.1",
+    "@wdio/visual-service": "^4.1.2",
+    "allure-commandline": "^2.29.0",
+    "wdio-docker-service": "^3.2.1"
+  },
+  "scripts": {
+    "test": "wdio ./wdio.conf.js",
+    "test-main": "wdio ./wdio.conf.js --suite main",
+    "test-cart": "wdio ./wdio.conf.js --suite cart",
+    "test-watch": "wdio run ./wdio.conf.js --watch",
+    "test-interShop" : "wdio ./wdio.conf.js --suite interShop",
+    "report": "npx allure serve allure-results && allure open"
+  },
+  "dependencies": {
+    "chromedriver": "^124.0.3"
+  }
+}
